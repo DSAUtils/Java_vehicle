@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: rra_vehicle
+  profiles:
+    active: dev
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/rra_vehicle
+    username: postgres
+    password: remy1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 500MB
+      max-request-size: 500MB
+
+jwt:
+  secretKey: your-secret-key
+
+server:
+  port: 8844
